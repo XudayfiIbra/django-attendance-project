@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Attendance, Student, Courses, Instructor
 
 class studentAdmin(admin.ModelAdmin):
-    list_display = ("name","email", "code",)
+    list_display = ("name","email", "code", "sex",)
 
 admin.site.register(Student, studentAdmin)
 
@@ -16,6 +16,6 @@ class coursesAdmin(admin.ModelAdmin):
 admin.site.register(Courses, coursesAdmin)
 
 class instructorAdmin(admin.ModelAdmin):
-    list_display = ('name', 'code')
+    list_display = ('name', 'code', "sex",)
 
 admin.site.register(Instructor, instructorAdmin)
